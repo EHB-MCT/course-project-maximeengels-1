@@ -1,24 +1,39 @@
 
 <template>
-    <div>Hello world</div>
+    <div>
+    <button @click="go">Click Here to Animate</button>
+    <div class="block" ref="square">hmm</div>
+    </div>
 </template>
 
 <script>
-import anime from 'animejs/lib/anime.es.js';
+import { translate } from '../animate';
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  methods: {
+    go() {
+      translate(this.$refs.square);
+      console.log("triggered");
+    }
   }
-}
-anime({
-  targets: 'div',
-  translateX: 250,
-  rotate: '1turn',
-  backgroundColor: '#FFF',
-  duration: 800,
-  loop: true
-});
+};
+
+// import anime from 'animejs/lib/anime.es.js';
+// export default {
+//   name: 'HelloWorld',
+//   props: {
+//     msg: String
+//   }
+// }
+// anime({
+//   targets: 'div',
+//   translateX: 250,
+//   rotate: '1turn',
+//   backgroundColor: '#FFF',
+//   duration: 800,
+//   loop: true
+// });
+
 </script>
 
 
