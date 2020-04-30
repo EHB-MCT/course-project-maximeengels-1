@@ -1,7 +1,9 @@
 
 <template>
     <div>
-
+        <div class="intro">
+            <h1 class="welcome">welcome</h1>
+        </div>
         
     <button @click="go">Click Here to Animate</button>
     <svg id="name-svg" width="auto" height="500">
@@ -48,6 +50,21 @@ export default {
 
 
 <style scoped>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  svg {
+      margin: auto;
+  }
+
+  .intro{
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.301);
+      color: white;
+      font-size: 5rem;
+  }
+
   #name-svg path {
    stroke-dasharray: 2000;
    stroke-dashoffset: 2000;

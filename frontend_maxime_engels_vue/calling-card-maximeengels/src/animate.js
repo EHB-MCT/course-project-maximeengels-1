@@ -1,15 +1,23 @@
 import anime from 'animejs';
 
   export function intro() {
+    // var textWrapper = document.querySelector('.welcome');
+    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/w, "<span class='letter'>$&</span>");
     var introAnimation = anime.timeline({
       loop: false
     });
     introAnimation.add({
-      targets: '#welcome-svg path',
-      
-      easing: 'easeInOutSine',
-      duration: 10000,
-      loop: false
+      targets: '.welcome .letter',
+      opacity: [0,1],
+      easing: "easeInOutQuad",
+      duration: 2250,
+      delay: (el, i) => 150 * (i+1)
+    }).add({
+      targets: '.welcome',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
     });
   }
 
@@ -21,14 +29,14 @@ import anime from 'animejs';
         targets: ['#name-svg path', '.cls-1', '.cls-2'],
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 10000,
+        duration: 12000,
         loop: false
       })
     .add({
       targets: '#name-svg path',
       fill: '#1E1E1E',
       easing: 'easeOutSine',
-      duration: 300,
+      duration: 500,
       offset: 0
     });
   }

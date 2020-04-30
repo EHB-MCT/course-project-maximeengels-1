@@ -16,11 +16,16 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: titleFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1E1E1E;
   margin-top: 60px;
+}
+
+@font-face {
+  font-family: titleFont;
+  src: url(./assets/OLDENGL.TTF);
 }
 </style>
