@@ -1,20 +1,34 @@
 import anime from 'animejs';
 
-export function translate(element) {
-    anime({
-      targets: element,
-      translateX: 500,
-      direction: 'alternate'
+  export function intro() {
+    var introAnimation = anime.timeline({
+      loop: false
+    });
+    introAnimation.add({
+      targets: '#welcome-svg path',
+      
+      easing: 'easeInOutSine',
+      duration: 10000,
+      loop: false
     });
   }
 
   export function linedraw() {
-    anime({
+    var drawingAnimation = anime.timeline({
+      loop: false
+    });
+    drawingAnimation.add({
         targets: ['#name-svg path', '.cls-1', '.cls-2'],
         strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutQuad',
-        duration: 6000,
-        direction: 'alternate',
-        loop: true
-      });
+        easing: 'easeInOutSine',
+        duration: 10000,
+        loop: false
+      })
+    .add({
+      targets: '#name-svg path',
+      fill: '#1E1E1E',
+      easing: 'easeOutSine',
+      duration: 300,
+      offset: 0
+    });
   }
