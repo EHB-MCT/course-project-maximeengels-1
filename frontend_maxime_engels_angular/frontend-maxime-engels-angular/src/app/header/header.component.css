@@ -1,5 +1,5 @@
 .toolbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -8,6 +8,7 @@
   align-items: center;
   color: white;
   font-weight: 600;
+  z-index: 999;
 }
 
 .nav {
@@ -26,6 +27,14 @@
 
 .left-align-nav button:hover{
     cursor: pointer;
+}
+
+.menuBtn svg{
+  transition: all .5s;
+}
+
+.menuBtn svg:hover{
+  transform: scaleX(1.2);
 }
 
 .center-align-nav {
@@ -47,6 +56,7 @@
 
 .getTicketsBtn p{
     text-align: center;
+    font-weight: 400;
     color: #EBEBEB;
     padding: 15px 40px 15px 40px;
     border: 1px solid #EBEBEB;

@@ -1,0 +1,38 @@
+.home{
+    position: relative;
+    display: inline-block;
+    min-width: 98vw;
+    min-height: 100vh;
+}
+
+.attrImg{
+    width: 90%;
+    position: fixed;
+    right: 5%;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.introText{
+    position: relative;
+    width: fit-content;
+    padding-left: 18px;
+    margin-top: 50vh;
+    margin-left: 55%;
+
+    border-left: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, rgba(84,0,255,1) 0%, rgba(94,0,255,1) 35%, rgba(238,0,255,1) 100%);
+}
+
+.introText > p{
+    line-height: 1.6;
+}
+
+.sideText{
+    color: #9F9F9F;
+    line-height: 1.4;
+  }
