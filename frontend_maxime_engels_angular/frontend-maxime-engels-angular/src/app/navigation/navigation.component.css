@@ -1,15 +1,29 @@
 .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 8vh;
-  
-    background-color: rgba(59, 59, 59, 0.404);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.322);
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: all .5s;
+  background-color: rgba(29, 29, 29, 0.404);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.322);
+}
+
+.overlay ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+  padding-left: 25%;
+}
+
+.overlay ul li {
+  font-size: 2.6em;
+  font-weight: 500;
+}

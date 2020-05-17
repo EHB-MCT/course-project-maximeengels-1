@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 @NgModule({
    declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      ClickOutsideModule
    ],
    providers: [],
    bootstrap: [

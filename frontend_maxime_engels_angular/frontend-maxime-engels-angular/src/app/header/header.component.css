@@ -56,19 +56,17 @@
 .getTicketsBtn p{
     text-align: center;
     font-weight: 400;
-    color: #EBEBEB;
-    padding: 15px 40px 15px 40px;
+    padding: 15px 40px;
     border: 1px solid #EBEBEB;
-    transition: background-color .5s, color .5s;
+    transition: background-color .4s, color .4s;
 }
 
 .getTicketsBtn:hover{
     width: 65%;
-    float: right;
-    cursor: pointer;
 }
 
 .getTicketsBtn p:hover{
     background-color: #EBEBEB;
     color: #101010;
+    cursor: pointer;
 }

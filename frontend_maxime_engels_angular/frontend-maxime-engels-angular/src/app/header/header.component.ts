@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit() {
   }
 
   openNav(): void {
-    console.log('ight boom');
-    document.getElementById('navOverlay').style.width = '60%';
+    document.getElementById('navOverlay').style.width = '50%';
   }
 
   getTickets(): void {
