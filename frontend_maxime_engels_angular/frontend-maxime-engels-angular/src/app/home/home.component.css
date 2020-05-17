@@ -1,38 +1,119 @@
-.home{
-    position: relative;
-    display: inline-block;
-    min-width: 98vw;
-    min-height: 100vh;
+.home {
+  position: relative;
+  min-height: 100vh;
 }
 
-.attrImg{
-    width: 90%;
-    position: fixed;
-    right: 5%;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+.attrImg {
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  right: 5%;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
-.introText{
-    position: relative;
-    width: fit-content;
-    padding-left: 18px;
-    margin-top: 50vh;
-    margin-left: 55%;
+.introText {
+  position: relative;
+  width: fit-content;
+  padding-left: 18px;
+  margin-top: 50vh;
+  margin-left: 55%;
 
+  border-left: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.introText>p {
+  line-height: 1.6;
+}
+
+.sideText {
+  color: #9F9F9F;
+  line-height: 1.4;
+}
+
+/* CONFERENCES */
+
+.firstConference{
+    margin: 20% 0 0 55%;
+    position: relative;
+    height: fit-content;
+}
+
+.conferences h1{
+    font-size: 2.5em;
+    margin-bottom: 7%;
+}
+
+.backImg{
+    z-index: 2;
+    width: 80%;
+    position: relative;
+}
+
+.frontImg{
+    position: absolute;
+    z-index: 5;
+    left: 40px;
+    bottom: -120px;
+    transition: all .3s;
+}
+
+.frontImg:hover{
+    transform: translateX(17px);
+    cursor: pointer;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.speakerInfo{
+    position: absolute;
+    z-index: 4;
+    left: 45%;
+    bottom: -120px;
+    padding: 40px 0 5px 18px;
+    min-height: 13vh;
     border-left: 2px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(180deg, rgba(84,0,255,1) 0%, rgba(94,0,255,1) 35%, rgba(238,0,255,1) 100%);
+    border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
 }
 
-.introText > p{
-    line-height: 1.6;
+.speakerInfo p{
+    margin: 0;
+    line-height: 2em;
 }
 
-.sideText{
-    color: #9F9F9F;
-    line-height: 1.4;
-  }
+/* SOCIALS */
+
+.socialIcons{
+    position: fixed;
+    width: fit-content;
+    float: right;
+    bottom: 40px;
+    right: 40px;
+} 
+
+.socials {
+  mix-blend-mode: difference;
+  display: block;
+  fill: #ebebeb;
+  transition: .2s;
+  transform: scale(.9);
+}
+
+.insta{
+    margin-bottom: 30%;
+}
+
+.insta:hover{
+    fill: #EE00FF;
+}
+
+.twitter:hover{
+    fill: #5400FF;
+}

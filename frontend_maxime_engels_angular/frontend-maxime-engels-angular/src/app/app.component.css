@@ -9,17 +9,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.spacer {
-  flex: 1;
-}
-
-.content {
-  display: flex;
-  height: 100vh;
-  padding: 0 60px;
-  max-width: 100%;
-  flex-direction: column;
-  align-items: center;
+.wrapper{
+    margin: 0;
+    padding: 0;
 }
 
 svg.material-icons {

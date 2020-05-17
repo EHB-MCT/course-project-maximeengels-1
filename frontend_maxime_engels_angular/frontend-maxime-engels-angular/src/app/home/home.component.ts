@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  // openNav(): void {
+  //   console.log('ight boom');
+  // }
+
 }

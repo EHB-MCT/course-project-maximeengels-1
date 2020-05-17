@@ -17,4 +17,8 @@ export class HeaderComponent implements OnInit {
     document.getElementById('navOverlay').style.width = '60%';
   }
 
+  getTickets(): void {
+    console.log('ight boom tickets');
+  }
+
 }

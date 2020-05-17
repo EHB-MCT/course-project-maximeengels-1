@@ -1,0 +1,41 @@
+/* FOOTER */
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10%;
+    padding: 40px 10%;
+    background-color: #272727;
+}
+
+.footerText{
+    width: fit-content;
+}
+
+.footerText p{
+    font-size: 17pt;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.footerText p:nth-child(2){
+    font-weight: 400;
+    width: fit-content;
+    transition: all .2s;
+}
+
+.footerText p:nth-child(2):hover{
+    color: #5400FF;
+    cursor: pointer;
+}
+
+.sponsors{
+    width: 600px;
+    display: flex;
+}
+
+.sponsors img{
+    padding: 0 5%;
+    height: 60%;
+}
