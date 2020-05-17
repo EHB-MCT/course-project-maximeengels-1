@@ -18,9 +18,7 @@ export class NavigationComponent implements OnInit {
   closeNav(e: Event): void {
     let nav = document.querySelector('div.overlay');
     let width = nav.offsetWidth;
-    console.log(width);
     if (width !== 0){
-      console.log('outside click');
       document.getElementById('navOverlay').style.width = '0';
     }
   }
