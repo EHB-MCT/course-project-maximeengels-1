@@ -27,6 +27,7 @@
   font-size: 2.6em;
   font-weight: 500;
   transition: all .4s;
+  width: fit-content;
 }
 
 .overlay ul li:hover{

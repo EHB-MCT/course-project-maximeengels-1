@@ -16,7 +16,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {}
 
   closeNav(e: Event): void {
-    let nav = document.querySelector('div.overlay');
+    let nav = document.querySelector('div.overlay') as any as HTMLElement;
     let width = nav.offsetWidth;
     if (width !== 0){
       document.getElementById('navOverlay').style.width = '0';
