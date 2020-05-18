@@ -15,9 +15,10 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {}
 
+  // EXTRA CLICKOUTSIDE PACKAGE
   closeNav(e: Event): void {
-    let nav = document.querySelector('div.overlay') as any as HTMLElement;
-    let width = nav.offsetWidth;
+    const nav = document.querySelector('div.overlay') as any as HTMLElement;
+    const width = nav.offsetWidth;
     if (width !== 0){
       document.getElementById('navOverlay').style.width = '0';
     }

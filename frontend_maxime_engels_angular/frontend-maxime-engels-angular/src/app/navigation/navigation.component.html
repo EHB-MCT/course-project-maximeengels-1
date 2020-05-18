@@ -1,7 +1,8 @@
+<!-- EXTRA CLICKOUTSIDE PACKAGE -->
 <div (clickOutside)="closeNav($event)" class="overlay" id="navOverlay">
   <ul>
-    <li>HOME</li>
-    <li>PROGRAM</li>
+    <li routerLink="/home" routerLinkActive="active">HOME</li>
+    <li routerLink="/program" routerLinkActive="active">PROGRAM</li>
     <li>TICKETS</li>
     <li>PRACTICAL</li>
     <li>ABOUT</li>

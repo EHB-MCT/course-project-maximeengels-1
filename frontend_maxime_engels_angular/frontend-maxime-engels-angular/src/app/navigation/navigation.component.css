@@ -9,7 +9,7 @@
   left: 0;
   overflow-x: hidden;
   transition: all .5s;
-  background-color: rgba(29, 29, 29, 0.404);
+  background-color: rgba(49, 49, 49, 0.404);
   backdrop-filter: blur(15px);
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.322);
 }
@@ -19,12 +19,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60%;
+  height: 52%;
   padding-left: 25%;
 }
 
 .overlay ul li {
-  font-size: 2.6em;
+  font-size: 2.4em;
   font-weight: 500;
   transition: all .4s;
   width: fit-content;
