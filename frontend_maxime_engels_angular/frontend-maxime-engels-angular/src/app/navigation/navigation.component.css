@@ -35,3 +35,8 @@
   color: rgb(122, 0, 192);
   cursor: pointer;
 }
+
+.active{
+  transform: scale(1.2);
+  color: rgb(192, 0, 176);
+}

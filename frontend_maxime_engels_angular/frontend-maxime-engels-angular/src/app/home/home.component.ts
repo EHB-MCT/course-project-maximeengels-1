@@ -13,10 +13,10 @@ export class HomeComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     window.onscroll = () => {
-      myFunction();
+      scrollFunction();
     };
 
-    function myFunction() {
+    function scrollFunction() {
       if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
         document.getElementById('attrImgId').className = 'attrImg hide';
       } else {
@@ -30,8 +30,6 @@ export class HomeComponent implements OnInit {
       }
     }
   }
-
-  methods() {}
 
   ngOnInit() {}
 

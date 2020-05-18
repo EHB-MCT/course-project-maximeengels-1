@@ -1,0 +1,55 @@
+
+.programPage {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 10%;
+}
+
+.programPage h1{
+  margin: 0 15% 2% 15%;
+}
+
+.timelineBg{
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  background: rgb(16,16,16);
+  background: linear-gradient(50deg, rgba(16,16,16,1) 0%, rgba(18,18,18,1) 49%, rgba(26,26,26,1) 100%);
+}
+
+.timeline{
+  margin: 4% 0 4% 15%;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.koffie{
+  height: 100%;
+  width: 15%;
+  border-left: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
+}
+
+.koffie p{
+  margin: 0;
+  padding-left: 18px;
+}
+
+p:first-child{
+  font-weight: 400;
+}
+
+.lowerTlInfo{
+  margin-top: 18px;
+  height: 85%;
+
+  border-top: 2px solid;
+  border-color: rgb(84, 0, 255);
+}
+
+.twee{
+  width: 30%;
+}
