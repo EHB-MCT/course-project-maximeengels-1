@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'program',        component: ProgramComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  // WILDCARD ROUTE  intercepts invalid URLs and handles them gracefully
+  // dit is een error route (kan eventueel een 404 pagina zijn)
   { path: '**', component: HomeComponent }
 ];
 

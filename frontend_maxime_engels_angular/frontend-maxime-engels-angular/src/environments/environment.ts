@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCXhuCCzrukqhx7Ho3thnF_IXW8WYCYT04',
+    authDomain: 'dotsandpix-maxime-e.firebaseapp.com',
+    databaseURL: 'https://dotsandpix-maxime-e.firebaseio.com',
+    projectId: 'dotsandpix-maxime-e',
+    storageBucket: 'dotsandpix-maxime-e.appspot.com',
+    messagingSenderId: '970306038478',
+    appId: '1:970306038478:web:ecb3fae7dc978c69413e9f',
+    measurementId: 'G-7Q3J4QY6H5'
+  }
 };
 
 /*
