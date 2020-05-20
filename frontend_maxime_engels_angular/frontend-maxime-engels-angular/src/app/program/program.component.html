@@ -11,10 +11,16 @@
           <div class="lowerTlInfo">
           </div>
         </div>
-        <div class="koffie twee">
-          <p>10H00</p>
-          <p class="sideText">Conference</p>
+        <div class="koffie speaker2" *ngFor="let speaker of speakers; let i=index;">
+          <p>{{speakers[i].beginhour}}</p>
+          <p class="sideText">{{speakers[i].beginhour}}</p>
           <div class="lowerTlInfo">
+            <p>{{speakers[i].name}}</p>
+            <p>{{speakers[i].job}}</p>
+            <p class="sideText">{{speakers[i].description}}</p>
+            <p class=""></p>
+            <p class=""></p>
+            <img src="{{speakers[i].backpic}}" alt="">
           </div>
         </div>
       </div>

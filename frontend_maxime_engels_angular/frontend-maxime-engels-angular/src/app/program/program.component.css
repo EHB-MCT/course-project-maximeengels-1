@@ -10,24 +10,42 @@
 }
 
 .timelineBg{
-  display: flex;
-  width: 100vw;
-  height: 50vh;
+  display: grid;
+  width: 50vh;
+  height: 100vw;
+  top: -13%;
+  grid-template-columns: repeat(7, 100%);
+
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
   background: rgb(16,16,16);
-  background: linear-gradient(50deg, rgba(16,16,16,1) 0%, rgba(18,18,18,1) 49%, rgba(26,26,26,1) 100%);
+  background: linear-gradient(-50deg, rgb(27, 20, 32) 0%, rgb(15, 10, 22) 49%, #0f0f0f 95%);
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
+
 .timeline{
-  margin: 4% 0 4% 15%;
-  width: 100vw;
-  height: auto;
   display: flex;
   flex-direction: row;
+  margin: 61% 0 4% 15%;
+  width: 200vw;
+  height: 19%;
+
+  transform: rotate(90deg) translateY(-30vh);
+  transform-origin: top left;
 }
 
 .koffie{
-  height: 100%;
-  width: 15%;
+  height: calc(100vh - 31em);
+  width: 10%;
   border-left: 2px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(180deg, rgba(84, 0, 255, 1) 0%, rgba(94, 0, 255, 1) 35%, rgba(238, 0, 255, 1) 100%);
@@ -36,6 +54,11 @@
 .koffie p{
   margin: 0;
   padding-left: 18px;
+  left: 0;
+}
+
+.speaker2{
+  width: 500px;
 }
 
 p:first-child{
@@ -43,13 +66,41 @@ p:first-child{
 }
 
 .lowerTlInfo{
-  margin-top: 18px;
-  height: 85%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  padding-top: 10%;
+  height: 80%;
 
   border-top: 2px solid;
   border-color: rgb(84, 0, 255);
 }
 
-.twee{
-  width: 30%;
+.lowerTlInfo img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  filter: blur(3px);
+  transition: all .5s;
+}
+
+.lowerTlInfo img:hover{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(1.2);
+  opacity: 0.2;
+  filter: blur(0px);
+  cursor: pointer;
+}
+
+.lowerTlInfo p{
+  position: relative;
+  cursor: default;
+  line-height: 1.7em;
+  width: fit-content;
+  z-index: 2;
 }

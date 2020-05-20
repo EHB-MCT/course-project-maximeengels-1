@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { DatabaseService } from 'src/app/database.service';
 
 @Component({
   selector: 'app-program',
@@ -8,7 +9,11 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ProgramComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  speakers: Array<any>;
+
+  constructor(@Inject(DOCUMENT) private document: Document,
+              private databaseService: DatabaseService
+    ) {
     window.onscroll = () => {
       scrollFunction();
     };
@@ -24,6 +29,11 @@ export class ProgramComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.databaseService.getSpeakers()
+    .then(result => {
+      this.speakers = result;
+      console.log(result);
+    });
   }
 
 }

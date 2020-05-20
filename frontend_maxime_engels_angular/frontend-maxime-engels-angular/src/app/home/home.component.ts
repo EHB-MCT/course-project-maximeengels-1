@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     this.databaseService.getSpeakers()
     .then(result => {
       this.speakers = result;
-      console.log(this.speakers);
+      console.log(result);
     });
   }
 
