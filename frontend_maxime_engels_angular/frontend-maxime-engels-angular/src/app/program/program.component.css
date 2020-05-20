@@ -14,7 +14,7 @@
   display: grid;
   width: 50vh;
   height: 100vw;
-  top: -8%;
+  top: -6%;
   grid-template-columns: repeat(7, 100%);
 
   transform: rotate(-90deg) translateX(-100vh);
@@ -85,7 +85,7 @@ p:first-child{
   height: auto;
   opacity: 0.3;
   filter: blur(3px);
-  transition: all .5s;
+  transition: all .4s;
 }
 
 .lowerTlInfo img:hover{

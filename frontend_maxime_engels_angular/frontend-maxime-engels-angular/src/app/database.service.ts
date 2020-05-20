@@ -17,4 +17,13 @@ constructor(public db: AngularFirestore) {}
     });
   }
 
+  getAbout() {
+    return new Promise<any>((resolve, reject) => {
+      this.db.collection('about').valueChanges()
+      .subscribe(snapshots => {
+        resolve(snapshots);
+      });
+    });
+  }
+
 }
