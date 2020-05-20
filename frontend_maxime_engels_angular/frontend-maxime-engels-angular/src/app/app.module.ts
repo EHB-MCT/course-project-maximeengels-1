@@ -13,6 +13,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { ProgramComponent } from './program/program.component';
+import { PracticalComponent } from './practical/practical.component';
+import { TicketsComponent } from './tickets/tickets.component';
+import { AboutComponent } from './about/about.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
    imports: [
@@ -28,7 +32,11 @@ import { ProgramComponent } from './program/program.component';
       FooterComponent,
       NavigationComponent,
       HomeComponent,
-      ProgramComponent
+      ProgramComponent,
+      PracticalComponent,
+      TicketsComponent,
+      AboutComponent,
+      PartnersComponent
    ],
    providers: [],
    bootstrap: [

@@ -1,0 +1,14 @@
+.practical{
+  position: relative;
+  min-height: 100vh;
+  padding: 10% 15% 0 15%;
+}
+
+.practical h1{
+  margin: 0 0 1% 0;
+  font-size: 2.5em;
+}
+
+.practical p{
+  line-height: 1.5em;
+}
