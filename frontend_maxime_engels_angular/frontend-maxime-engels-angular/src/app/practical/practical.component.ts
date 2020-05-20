@@ -12,4 +12,11 @@ export class PracticalComponent implements OnInit {
   ngOnInit() {
   }
 
+  openDropdown(): void {
+    if (document.getElementById('dropdownContent').style.opacity === '0'){
+      document.getElementById('dropdownContent').style.opacity = '1';
+    } else {
+      document.getElementById('dropdownContent').style.opacity = '0';
+    }
+  }
 }

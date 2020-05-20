@@ -3,5 +3,17 @@
   <p>Look on the map to see info about the whereabouts <br> of the festival as well as good places to eat, <br> drink or sleep in Brussels.</p>
   <div class="map">
     <p class="sideText">BOZAR - Brussels, Belgium</p>
+    <div class="dropdown">
+      <div (click)="openDropdown()" class="locationBtn">
+        <p>LOCATION</p>
+      </div>
+      <div class="dropdownContent" id="dropdownContent">
+        <p>EAT</p>
+        <p>SLEEP</p>
+        <p>DRINK</p>
+      </div>
+    </div>
+    <iframe class="mapIframe" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDHuUVrr3UgxGtmabAYpq7o2ahxPvbwt8Y&q=BOZAR+brussels+belgium" frameborder="0" allowfullscreen=""></iframe>
   </div>
 </div>
+ 
