@@ -30,17 +30,33 @@
   margin-left: 10%;
 }
 
-.voka{
-  transform: scale(.7);
-}
-
 img{
   margin-left: 5%;
 }
 
+.golden img{
+  transform: scale(1.2);
+}
+
+.silver img{
+  transform: scale(.9);
+}
+
+.silver .voka{
+  transform: scale(.5);
+}
+
+.bronze img{
+  transform: scale(.8);
+}
+
 .light{
   margin-bottom: 5%;
-  opacity: .2;
+  opacity: .15;
+}
+
+.light img{
+  transform: scale(.7);
 }
 
 .golden h3{

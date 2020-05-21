@@ -26,4 +26,13 @@ constructor(public db: AngularFirestore) {}
     });
   }
 
+  getTickets() {
+    return new Promise<any>((resolve, reject) => {
+      this.db.collection('tickets').valueChanges()
+      .subscribe(snapshots => {
+        resolve(snapshots);
+      });
+    });
+  }
+
 }
