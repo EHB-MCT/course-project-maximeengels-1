@@ -246,7 +246,11 @@
 .coachingContainer{
   margin-top: 15%;
   margin-left: 15%;
+  margin-right: 0;
   display: flex;
+  flex-direction: row;
+  width: fit-content;
+  float: left;
 }
 
 .infoBtnWrap{
@@ -273,40 +277,6 @@
   margin-top: 3px;
 }
 
-/* BUTTON */
-
-/* .signUp {
-  position: relative;
-  margin-top: 10%;
-}
-
-.signUpBtn {
-  position: absolute;
-  right: 0;
-  width: 60%;
-  transition: width .5s;
-}
-
-.signUpBtn p {
-  text-align: center;
-  font-weight: 400;
-  padding: 15px 40px;
-  border: 1px solid #EBEBEB;
-  transition: background-color .5s, color .5s;
-}
-
-.signUpBtn p:hover {
-  background-color: #EBEBEB;
-  color: #101010;
-  cursor: pointer;
-}
-
-.signUpBtn:hover{
-  width: 70%;
-} */
-
-/* IMAGE */
-
 .coachImg{
   position: absolute;
   z-index: -1;
@@ -317,4 +287,63 @@
 .coachImg img{
   width: 25vw;
   opacity: .1;
+}
+
+/* FORM */
+
+.form{
+  width: 50%;
+  margin-top: 5%;
+  display: flex;
+  float: right;
+}
+
+.inputStyle{
+  width: 100%;
+}
+
+.inputStyle input{
+  padding: 15px 40px;
+  background-color: #17151b;
+}
+
+.inputStyle #name{
+  width: 30%;
+  border: none;
+  padding: 16px 20px;
+}
+
+.inputStyle #email{
+  width: 60%;
+  border: none;
+  padding: 16px 20px;
+}
+
+.inputStyle #submit{
+  text-align: center;
+  font-weight: 400;
+  border: 1px solid #EBEBEB;
+}
+
+input[type=text]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+}
+
+input[type=email]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+}
+
+input[type=submit]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+  transition: background-color .5s, color .5s;
+}
+
+input[type=submit]:hover{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  background-color: #EBEBEB;
+  color: #101010;
+  cursor: pointer;
 }

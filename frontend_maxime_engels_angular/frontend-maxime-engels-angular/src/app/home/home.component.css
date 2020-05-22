@@ -156,6 +156,11 @@ input[type=submit]:hover{
   cursor: pointer;
 }
 
+input[type=email]{
+  font-family: -apple-system, BlinkMacSystemFont, 'Fira Sans', sans-serif;
+  color: #EBEBEB;
+}
+
 /* ===========================================FULL PROGRAM=========================================== */
 
 .fullProgram {

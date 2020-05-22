@@ -2,7 +2,7 @@
   <h1>GET YOUR TICKETS</h1>
   <div class="tickets">
     <div class="ticketWrap" *ngFor="let ticket of tickets; let i=index;">
-      <div class="ticket" id="{{tickets[i].typesmall}}">
+      <div (click)="updateCount($event)" class="ticket" id="{{tickets[i].typesmall}}">
         <div class="topTicket">
           <h2>{{tickets[i].type}}</h2>
           <h1>€{{tickets[i].price}}</h1>
@@ -27,9 +27,9 @@
             <p class="sideText">€{{tickets[i].price}}</p>
           </div>
           <div class="rightText">
-            <p class="btn min">-</p>
-            <p class="amount" id="amount">0</p>
-            <p class="btn plus">+</p>
+            <p (click)="deleteCount($event)" class="btn min" id="{{tickets[i].typesmall}}">-</p>
+            <p class="amount" id="amount">{{getCount(i)}}</p>
+            <p (click)="updateCount($event)" class="btn plus" id="{{tickets[i].typesmall}}">+</p>
           </div>
         </div>
       </div>
@@ -40,8 +40,8 @@
           </div>
           <div class="rightTotal">
             <p class="totalBorder">TOTAL</p>
-            <p>590 EUR <span id="discountText">-10%</span></p>
-            <p class="total" id="total">531 EUR</p>
+            <p>{{getTotalNoDisc()}}<span id="discountText">{{showDiscount()}}</span></p>
+            <p class="total" id="total">{{getTotal()}}</p>
             <div class="checkoutBtn">
               <p class="student">CHECKOUT</p>
             </div>
@@ -61,8 +61,19 @@
         </div>
       </div>
       <div class="coachImg">
-          <img src="assets/jpg/otherImg/coachingImg.jpg" alt="">
-        </div>
+        <img src="assets/jpg/otherImg/coachingImg.jpg" alt="">
+      </div>
+    </div>
+    <div class="form">
+      <form class="inputStyle" action="/action_page.php">
+        <p>Name:</p>
+        <input type="text" id="name" placeholder="Enter your name here" name="email">
+        <p>Last Name:</p>
+        <input type="text" id="name" placeholder="Enter your last name here" name="email">
+        <p>Email:</p>
+        <input type="email" id="email" placeholder="Enter your email here" name="email">
+        <input type="submit" id="submit" value="SUBMIT">
+      </form>
     </div>
   </div>
 </div>
