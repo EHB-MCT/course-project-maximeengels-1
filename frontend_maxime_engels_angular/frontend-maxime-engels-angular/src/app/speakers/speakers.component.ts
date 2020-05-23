@@ -43,4 +43,8 @@ export class SpeakersComponent implements OnInit {
     });
   }
 
+  goBack() {
+    window.history.back();
+  }
+
 }
