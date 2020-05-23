@@ -19,7 +19,7 @@
             <p>{{speakers[i].job}}</p>
             <p class="sideText">{{speakers[i].description}}</p>
             <h3 class="hallInfo">{{speakers[i].hall}}</h3>
-            <img src="{{speakers[i].backpic}}" alt="">
+            <img routerLink="/speakers/{{i}}" routerLinkActive="active" src="{{speakers[i].backpic}}" alt="">
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
     </h1>
     <div class="lineupRow">
       <div class="speakersLineup" *ngFor="let speaker of speakers; let i=index;">
-        <img src="{{speakers[i].frontpic}}" alt="">
+        <img routerLink="/speakers/{{i}}" routerLinkActive="active" src="{{speakers[i].frontpic}}" alt="">
         <div class="lineupText">
           <p>{{speakers[i].name}}</p>
           <p>{{speakers[i].job}}</p>

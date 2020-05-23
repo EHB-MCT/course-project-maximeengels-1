@@ -17,6 +17,7 @@ import { PracticalComponent } from './practical/practical.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { AboutComponent } from './about/about.component';
 import { PartnersComponent } from './partners/partners.component';
+import { SpeakersComponent } from './speakers/speakers.component';
 
 @NgModule({
    imports: [
@@ -36,7 +37,8 @@ import { PartnersComponent } from './partners/partners.component';
       PracticalComponent,
       TicketsComponent,
       AboutComponent,
-      PartnersComponent
+      PartnersComponent,
+      SpeakersComponent
    ],
    providers: [],
    bootstrap: [

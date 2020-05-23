@@ -192,33 +192,3 @@ input[type=email]{
   width: 18%;
 }
 
-/* ===========================================SOCIALS=========================================== */
-
-.socialIcons {
-  position: fixed;
-  width: fit-content;
-  float: right;
-  bottom: 40px;
-  right: 40px;
-}
-
-.socials {
-  mix-blend-mode: difference;
-  display: block;
-  fill: #ebebeb;
-  transition: .2s;
-  transform: scale(.9);
-}
-
-.insta {
-  margin-bottom: 30%;
-}
-
-.insta:hover {
-  fill: #EE00FF;
-}
-
-.twitter:hover {
-  fill: #5400FF;
-}
-

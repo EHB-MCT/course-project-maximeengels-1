@@ -12,7 +12,7 @@
     <div class="firstConference">
       <h1>CONFERENCES</h1>
       <img class="backImg" src="{{speakers[0].backpic}}" alt="">
-      <img class="frontImg" src="{{speakers[0].frontpic}}" alt="">
+      <img routerLink="/speakers/0" routerLinkActive="active" class="frontImg" src="{{speakers[0].frontpic}}" alt="">
       <div class="speakerInfo">
         <p>{{speakers[0].name}}</p>
         <p>{{speakers[0].job}}</p>
@@ -22,7 +22,7 @@
     <div class="gridConference">
       <div class="conference">
         <img class="backImg" src="{{speakers[1].backpic}}" alt="">
-        <img class="frontImg" src="{{speakers[1].frontpic}}" alt="">
+        <img routerLink="/speakers/1" routerLinkActive="active" class="frontImg" src="{{speakers[1].frontpic}}" alt="">
         <div class="speakerInfo">
           <p>{{speakers[1].name}}</p>
           <p>{{speakers[1].job}}</p>
@@ -31,7 +31,7 @@
       </div>
       <div class="conference two">
         <img class="backImg" src="{{speakers[2].backpic}}" alt="">
-        <img class="frontImg" src="{{speakers[2].frontpic}}" alt="">
+        <img routerLink="/speakers/2" routerLinkActive="active" class="frontImg" src="{{speakers[2].frontpic}}" alt="">
         <div class="speakerInfo">
           <p>{{speakers[2].name}}</p>
           <p>{{speakers[2].job}}</p>
