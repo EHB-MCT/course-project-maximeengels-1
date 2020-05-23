@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Intro msg="Welcome to Your Vue.js App"/>
+    <Info msg="Welcome to my Info page"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Intro from './components/Intro.vue'
+import Info from './components/Info.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Intro,
+    Info
   }
 }
 </script>
@@ -22,6 +25,13 @@ export default {
   text-align: center;
   color: #1E1E1E;
   margin-top: 60px;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+body{
+  margin: 0;
+  background-color: #252525;
 }
 
 @font-face {

@@ -4,21 +4,24 @@ import anime from 'animejs';
     // var textWrapper = document.querySelector('.welcome');
     // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/w, "<span class='letter'>$&</span>");
     var introAnimation = anime.timeline({
-      loop: false
+      loop: true
     });
     introAnimation.add({
-      targets: '.welcome .letter',
-      opacity: [0,1],
-      easing: "easeInOutQuad",
-      duration: 2250,
-      delay: (el, i) => 150 * (i+1)
+      targets: '.welcome span',
+      paddingLeft: 20,
+      scale: [{value: .6, easing: 'easeInOutSine', duration: 500}, 
+      {value: 1, easing: 'easeOutSine', duration: 500}],
+      delay: anime.stagger(100, {from: 'center'})
     }).add({
-      targets: '.welcome',
-      opacity: 0,
-      duration: 1000,
-      easing: "easeOutExpo",
-      delay: 1000
+      targets: '.welcome span',
+      paddingLeft: 0,
+      easing: 'easeInOutSine',
+      duration: 600,
+      delay: anime.stagger(50, {from: 'center'})
     });
+
+    introAnimation.play();
+
   }
 
   export function linedraw() {
