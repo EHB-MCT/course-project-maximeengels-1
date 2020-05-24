@@ -15,7 +15,17 @@
         
       <button @click="go">Click Here to Animate</button>
 
-      <img class="cutoutImg left" src="../assets/walkingImg2.png" alt="">
+      <div class="row">
+        <div class="upper">
+          <img @click="anim" id="left" class="cutoutImg left" src="../assets/walkingImg2.png" alt="">
+          <div class="leftSquare"></div>
+          <img @click="info" class="cutoutImg right" src="../assets/frontImg2.png" alt="">
+        </div>
+        <div class="under">
+          <h2>ANIMATION</h2>
+          <h2>INFORMATION</h2>
+        </div>
+      </div>
 
       <!-- <div class="nameAni">
         <svg id="name-svg" width="auto" height="500">
@@ -50,12 +60,21 @@
 <script>
 import { intro } from '../animate';
 import { linedraw } from '../animate';
+import { transitionLeft } from '../animate';
+import { transitionRight } from '../animate';
 export default {
   methods: {
     go() {
-      console.log("triggered");
-      linedraw();
       intro();
+    },
+    anim() {
+      transitionLeft();
+      var img = document.getElementById("left");
+      img.classList.remove("left");
+      linedraw();
+    },
+    info(){
+      transitionRight();
     }
   }
 };
@@ -74,10 +93,39 @@ svg {
   margin: auto;
 }
 
+.row h2{
+  width: fit-content;
+}
+
+.upper{
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.under{
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.leftSquare{
+  position: absolute;
+  left: 20vw;
+  width: 0;
+  height: 0;
+  background-color: #500000;
+  z-index: -1;
+}
+
 button{
   padding: 15px 30px;
-  background-color: #2f2f2f;
-  color: rgb(202, 202, 202);
+  background-color: #333333;
+  color: rgb(219, 219, 219);
   border: 0;
   width: 12%;
   transition: all .5s;
@@ -87,29 +135,34 @@ button{
 button:hover{
   cursor: pointer;
   width: 15%;
-  background-color: #272727;
+  background-color: #3b3b3b;
   color: rgb(219, 219, 219);
 }
 
 .cutoutImg{
-  background-color: #252525;
-  width: 20%;
+  background-color: transparent;
+  width: 20vw;
   transition: all .3s;
 }
 
-.cutoutImg:hover{
-  cursor: pointer;
-  background-color: #dfdfdf;
-  width: 22%;
-  box-shadow: 0px 0px 50px rgb(19, 19, 19);
+#left{
+  z-index: 2;
 }
 
-.intro{
-  
+.left:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #500000;
+}
+
+.right:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #010050;
 }
 
 .welcome{
-  color: rgb(131, 131, 131);
+  color: rgb(219, 219, 219);
   font-weight: 600;
 }
 

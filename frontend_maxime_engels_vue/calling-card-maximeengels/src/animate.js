@@ -19,9 +19,7 @@ import anime from 'animejs';
       duration: 600,
       delay: anime.stagger(50, {from: 'center'})
     });
-
     introAnimation.play();
-
   }
 
   export function linedraw() {
@@ -41,5 +39,48 @@ import anime from 'animejs';
       easing: 'easeOutSine',
       duration: 500,
       offset: 0
+    });
+  }
+
+  export function transitionLeft() {
+    var introAnimation = anime.timeline({
+      loop: false
+    });
+    introAnimation.add({
+        targets: ['.leftSquare'],
+        width: '100%',
+        height: '100%',
+        left: 0,
+        bottom: 0,
+        right: 0,
+        top: 0,
+        easing: 'easeInOutSine',
+        duration: 500,
+        loop: false
+      }).add({
+        targets: ['#left'],
+        scale: 1.6,
+        duration: 500,
+        loop: false
+      }).add({
+        targets: ['.intro', '.right', '.under'],
+        opacity: 0,
+        easing: 'easeInOutSine',
+        duration: 500,
+        loop: false
+      });
+  }
+
+  export function transitionRight() {
+    var introAnimation = anime.timeline({
+      loop: false
+    });
+    introAnimation.add({
+        targets: ['.right img'],
+        easing: 'easeInOutSine',
+        duration: 6000,
+        loop: false
+      })
+    .add({
     });
   }
