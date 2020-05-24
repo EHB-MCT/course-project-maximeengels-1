@@ -1,25 +1,13 @@
 <template>
   <div id="app">
-    <Intro msg="Welcome to Your Vue.js App"/>
-    <Anim msg="Welcome to Your Vue.js App"/>
-    <Info msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/anim">Animation</router-link>
+      <router-link to="/info">Info</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import Intro from './components/Intro.vue'
-import Info from './components/Info.vue'
-import Anim from './components/Anim.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Intro,
-    Info,
-    Anim
-  }
-}
-</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500&family=Montserrat:wght@900&display=swap');
@@ -34,8 +22,13 @@ export default {
   user-select: none;
   max-width: 100vw;
   max-height: 100vh;
+  max-height: 100vh;
   /* overflow-x: hidden;
   overflow-y: hidden; */
+}
+
+#nav{
+  position: fixed;
 }
 
 body{
