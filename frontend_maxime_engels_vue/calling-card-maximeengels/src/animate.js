@@ -47,10 +47,16 @@ import anime from 'animejs';
       loop: false
     });
     introAnimation.add({
+      targets: ['.leftSquare'],
+      backgroundColor: '#500000',
+      duration: 100,
+      scale: 1.1
+    }).add({
         targets: ['.leftSquare'],
+        scale: 1,
         width: '100%',
-        height: '100%',
-        left: 0,
+        height: ['55%', '100%'],
+        left: ['20vw', 0],
         bottom: 0,
         right: 0,
         top: 0,
@@ -68,6 +74,10 @@ import anime from 'animejs';
         easing: 'easeInOutSine',
         duration: 500,
         loop: false
+      }).add({
+        
+      }).add({
+        
       });
   }
 

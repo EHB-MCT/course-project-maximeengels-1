@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Intro msg="Welcome to Your Vue.js App"/>
-    <Info msg="Welcome to my Info page"/>
-    <Anim class="animPage" msg="Welcome to my Anim page"/>
+    <Anim msg="Welcome to Your Vue.js App"/>
+    <Info msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 import Intro from './components/Intro.vue'
 import Info from './components/Info.vue'
 import Anim from './components/Anim.vue'
+
 export default {
   name: 'App',
   components: {
@@ -31,8 +32,10 @@ export default {
   color: #1E1E1E;
   -moz-user-select: none;
   user-select: none;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
 }
 
 body{

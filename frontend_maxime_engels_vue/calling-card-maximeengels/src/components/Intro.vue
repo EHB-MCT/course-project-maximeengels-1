@@ -116,9 +116,9 @@ svg {
 .leftSquare{
   position: absolute;
   left: 20vw;
-  width: 0;
-  height: 0;
-  background-color: #500000;
+  width: 22%;
+  height: 55%;
+  background-color: transparent;
   z-index: -1;
 }
 
@@ -141,7 +141,7 @@ button:hover{
 
 .cutoutImg{
   background-color: transparent;
-  width: 20vw;
+  width: 22vw;
   transition: all .3s;
 }
 
