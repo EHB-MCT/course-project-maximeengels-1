@@ -25,9 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Documentation
 
 Angular Documentation:
+
   Directives
+  
   Routing
+  
   Event Binding
+  
   Template Expressions
 
 Stack Overflow:
@@ -48,6 +52,7 @@ Stack Overflow:
     https://stackoverflow.com/questions/50093589/angular-firebase-property-database-does-not-exist-on-type
 
 Random pages:
+
   Google Maps API
     https://developers.google.com/maps/documentation/embed/guide?authuser=1#optional_parameters
   
