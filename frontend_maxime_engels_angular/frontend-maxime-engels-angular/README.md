@@ -57,7 +57,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
     https://developers.google.com/maps/documentation/embed/guide?authuser=1#optional_parameters
   
   W3 Schools
+  
     https://www.w3schools.com/cssref/pr_mix-blend-mode.asp
+    
     https://www.w3schools.com/tags/att_input_placeholder.asp
   
   Cloud firestore db & angular, not really helpful
@@ -67,12 +69,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
     https://blog.thoughtram.io/angular/2016/10/13/two-way-data-binding-in-angular-2.html
   
   Observables and Routing
+  
     https://codecraft.tv/courses/angular/http/http-with-observables/
+    
     https://codecraft.tv/courses/angular/routing/parameterised-routes/
+    
     https://medium.com/@luukgruijs/understanding-creating-and-subscribing-to-observables-in-angular-426dbf0b04a3
   
   Css Gradient & Shadow Generator
+  
     https://cssgradient.io/
+    
     https://www.cssmatic.com/box-shadow
   
 
