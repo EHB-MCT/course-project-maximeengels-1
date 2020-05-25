@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Documentation
 
-Angular Documentation:
+### Angular Documentation:
 
   Directives
   
@@ -34,7 +34,7 @@ Angular Documentation:
   
   Template Expressions
 
-Stack Overflow:
+### Stack Overflow:
 
   Scroll-to-top on route change
     https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
@@ -51,7 +51,7 @@ Stack Overflow:
   Cloud db error
     https://stackoverflow.com/questions/50093589/angular-firebase-property-database-does-not-exist-on-type
 
-Random pages:
+### Random pages:
 
   Google Maps API
     https://developers.google.com/maps/documentation/embed/guide?authuser=1#optional_parameters
