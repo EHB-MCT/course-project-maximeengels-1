@@ -1,5 +1,6 @@
 <template>
   <div class="animPage">
+    <button @click="goHome" class="homeBtn">X</button>
       <img id="left" class="cutoutImg left" src="../assets/walkingImg2.png" alt="">
     <button class="click">click to reverse</button>
     <div class="text">
@@ -8,7 +9,80 @@
     </div>
 
     <div class="animation">
-      <div class="gridAnim"></div>
+      <div class="gridAnim" id="gridAnim">
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+        <div class="square" id="div"></div>
+      </div>
       <img class="line" src="../assets/SVG/line.svg" alt="">
     </div>
   </div>
@@ -17,16 +91,46 @@
 <script>
   import { movingText } from '../animate';
   import { animation } from '../animate';
+  import { goToHome } from '../router/index';
   
   export default {
     mounted: function() {
       movingText();
       animation();
+    },
+    methods: {
+      goHome() {
+        goToHome();
+      }
     }
   }
 </script>
 
 <style scoped>
+  .homeBtn{
+    position: absolute;
+    color: #F7F7F7;
+    border-radius: 50%;
+    right: 3%;
+    top: 4%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    z-index: 9999;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    background-color: #252525;
+    transition: all .3s;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.356);
+  }
+
+  .homeBtn:hover{
+    cursor: pointer;
+    background-color: #202020;
+    color: rgb(93, 7, 7);
+  }
+
   .animPage{
     height: 100vh;
     width: 100vw;
@@ -90,6 +194,7 @@
 
   .animation{
     padding-top: 47vh;
+    display: flex
   }
 
   .line{
@@ -101,17 +206,23 @@
 
   .gridAnim{
     display: flex;
+    position: fixed;
     flex-wrap: wrap;
-    z-index: 10;
+    right: 30%;
+    margin-right: -50vw;
+    z-index: 1000;
     justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 15rem;
+    margin-top: -5%;
+    width: 12rem;
+    height: 8rem;
   }
 
   .gridAnim div{
+    z-index: 1000;
     width: 1rem;
     height: 1rem;
+    margin-top: 5px;
+    margin-right: 5px;
     border: 1px solid #202020;
     background-color: #202020;
   }

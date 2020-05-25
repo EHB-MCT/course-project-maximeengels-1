@@ -32,6 +32,14 @@ export function goToAnim(){
   router.push(routes[1]);
 }
 
+export function goToHome(){
+  router.push(routes[0]);
+}
+
+export function goToInfo(){
+  router.push(routes[2]);
+}
+
 const router = new VueRouter({
   routes
 })

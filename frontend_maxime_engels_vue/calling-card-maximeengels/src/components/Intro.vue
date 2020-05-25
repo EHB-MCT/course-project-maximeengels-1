@@ -3,13 +3,13 @@
     <div>
         <div class="intro">
             <div class="welcome">
-              <span>w</span>
-              <span>e</span>
-              <span>l</span>
-              <span>c</span>
-              <span>o</span>
-              <span>m</span>
-              <span>e</span>
+              <span>W</span>
+              <span>E</span>
+              <span>L</span>
+              <span>C</span>
+              <span>O</span>
+              <span>M</span>
+              <span>E</span>
             </div>
         </div>
 
@@ -17,7 +17,8 @@
         <div class="upper">
           <img @click="anim" id="left" class="cutoutImg left" src="../assets/walkingImg2.png" alt="">
           <div class="leftSquare"></div>
-          <img @click="info" class="cutoutImg right" src="../assets/frontImg2.png" alt="">
+          <img @click="info" id="right" class="cutoutImg right" src="../assets/frontImg2.png" alt="">
+          <div class="rightSquare"></div>
         </div>
         <div class="under">
           <h2>ANIMATION</h2>
@@ -57,7 +58,7 @@
 
 <script>
 import { intro } from '../animate';
-import { linedraw } from '../animate';
+// import { linedraw } from '../animate';
 import { transitionLeft } from '../animate';
 import { transitionRight } from '../animate';
 export default {
@@ -69,13 +70,15 @@ export default {
       transitionLeft();
       var img = document.getElementById("left");
       img.classList.remove("left");
-      linedraw();
+      // linedraw();
     },
     info(){
       transitionRight();
+      var img = document.getElementById("right");
+      img.classList.remove("right");
     }
   }
-};
+}
 </script>
 
 
@@ -91,6 +94,19 @@ svg {
   margin: auto;
 }
 
+.welcome{
+  margin-top: 2%;
+  color: #F7F7F7;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+}
+
+.welcome span{
+  font-size: 8vw;
+  display: inline-block;
+  animation: scale 2s ease-in-out;
+}
+
 .row h2{
   width: fit-content;
 }
@@ -98,7 +114,7 @@ svg {
 .upper{
   width: 100%;
   height: 55vh;
-  margin-top: 3%;
+  margin-top: 3.5%;
   display: flex;
   align-content: center;
   justify-content: space-evenly;
@@ -112,9 +128,23 @@ svg {
   justify-content: space-around;
 }
 
+.under h2{
+  color: #F7F7F7;
+
+}
+
 .leftSquare{
   position: absolute;
   left: 20vw;
+  width: 22%;
+  height: 55%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.rightSquare{
+  position: absolute;
+  right: 20vw;
   width: 22%;
   height: 55%;
   background-color: transparent;
@@ -159,29 +189,6 @@ button:hover{
   transform: scale(1.1);
   background-color: #010050;
 }
-
-.welcome{
-  color: rgb(219, 219, 219);
-  font-weight: 600;
-}
-
-.welcome span{
-  font-size: 10vw;
-  display: inline-block;
-  animation: scale 2s ease-in-out;
-}
-
-/* INTRO ANIMATION */
-
-/* @keyframes scale {
-  0% {
-  }
-  50% {
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.301);
-  }
-  100% {
-  }
-} */
 
 #name-svg{
   margin: 0 auto;

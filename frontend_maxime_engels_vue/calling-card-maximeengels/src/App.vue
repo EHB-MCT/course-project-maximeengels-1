@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/anim">Animation</router-link>
-      <router-link to="/info">Info</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
@@ -41,7 +36,8 @@ body{
 
 h1,
 h2,
-h3{
+h3,
+p{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   color: rgb(190, 190, 190);
@@ -52,8 +48,25 @@ h3{
   width: 100vw;
 }
 
-@font-face {
-  font-family: titleFont;
-  src: url(./assets/OLDENGL.TTF);
-}
+.homeBtn{
+    position: absolute;
+    color: #F7F7F7;
+    border-radius: 50%;
+    right: 3%;
+    top: 4%;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    font-weight: 600;
+    border: none;
+    background-color: #252525;
+    transition: all .5s;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.356);
+  }
+
+  .homeBtn:hover{
+    cursor: pointer;
+    background-color: #202020;
+    color: rgb(195, 195, 195);
+  }
 </style>
