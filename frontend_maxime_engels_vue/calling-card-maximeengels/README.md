@@ -30,6 +30,8 @@ npm run lint
   
 ### Animejs Documentation:
 
+  //All animations and transitions except for hovers done with animejs
+
   Staggering
   
   Delay
