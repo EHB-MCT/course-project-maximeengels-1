@@ -1,27 +1,27 @@
 <template>
   <div class="animPage">
       <img id="left" class="cutoutImg left" src="../assets/walkingImg2.png" alt="">
-      <button @click="animText()">click</button>
-    
+    <button class="click">click to reverse</button>
     <div class="text">
       <img class="title" src="../assets/SVG/hi2.svg" alt="">
       <img class="underTitle" src="../assets/SVG/enjoy.svg" alt="">
     </div>
-    <!-- <svg class="svgMorph">
-        <path stroke="none" fill="white" d="M 0 0 L 3000 0 L 3000 3000 L 0 3000 Z"></path>
-    </svg> -->
+
+    <div class="animation">
+      <div class="gridAnim"></div>
+      <img class="line" src="../assets/SVG/line.svg" alt="">
+    </div>
   </div>
 </template>
 
 <script>
   import { movingText } from '../animate';
+  import { animation } from '../animate';
   
   export default {
-    methods: {
-    animText(){
-
+    mounted: function() {
       movingText();
-    }
+      animation();
     }
   }
 </script>
@@ -31,12 +31,14 @@
     height: 100vh;
     width: 100vw;
     background-color: #500000;
+    -moz-user-select: none;
+    user-select: none;
   }
 
   .cutoutImg{
     position: absolute;
     left: 18.7%;
-    bottom: 19.2%;
+    bottom: 18%;
     background-color: transparent;
     width: 22vw;
     height: 55vh;
@@ -48,7 +50,7 @@
   .text{
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
     opacity: 0;
     background-color: transparent;
   }
@@ -66,11 +68,51 @@
     width: 40%;
   }
 
-  .svgMorph{ 
+  .click{
+    position: absolute;
+    cursor: pointer;
+    bottom: 8%;
+    right: 6%;
+    padding:1% 6%;
+    border: none;
+    color: #F7F7F7;
+    background-color: #500000;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.356);
+    -moz-user-select: none;
+    user-select: none;
+    transition: all .5s;
+  }
+
+  .click:hover{
+    color: rgb(235, 235, 235);
+    background-color: #680505;
+  }
+
+  .animation{
+    padding-top: 47vh;
+  }
+
+  .line{
+    z-index: 9;
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    margin-left: 120vw;
+    width: 120%;
+  }
+
+  .gridAnim{
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .gridAnim div{
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #202020;
+    background-color: #202020;
   }
 </style>

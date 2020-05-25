@@ -12,8 +12,6 @@
               <span>e</span>
             </div>
         </div>
-        
-      <button @click="go">Click Here to Animate</button>
 
       <div class="row">
         <div class="upper">
@@ -63,10 +61,10 @@ import { linedraw } from '../animate';
 import { transitionLeft } from '../animate';
 import { transitionRight } from '../animate';
 export default {
-  methods: {
-    go() {
+  mounted: function(){
       intro();
-    },
+  },
+  methods: {
     anim() {
       transitionLeft();
       var img = document.getElementById("left");
@@ -100,13 +98,14 @@ svg {
 .upper{
   width: 100%;
   height: 55vh;
+  margin-top: 3%;
   display: flex;
   align-content: center;
   justify-content: space-evenly;
 }
 
 .under{
-  margin-top: 1%;
+  margin-top: 3%;
   width: 100%;
   display: flex;
   align-content: center;

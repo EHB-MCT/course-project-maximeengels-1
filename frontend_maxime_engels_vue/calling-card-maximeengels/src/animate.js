@@ -22,26 +22,6 @@ import { goToAnim } from './router/index';
     introAnimation.play();
   }
 
-  export function linedraw() {
-    var drawingAnimation = anime.timeline({
-      loop: false
-    });
-    drawingAnimation.add({
-        targets: ['#name-svg path', '.cls-1', '.cls-2'],
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 12000,
-        loop: false
-      })
-    .add({
-      targets: '#name-svg path',
-      fill: '#1E1E1E',
-      easing: 'easeOutSine',
-      duration: 500,
-      offset: 0
-    });
-  }
-
   export function transitionLeft() {
     var introAnimation = anime.timeline({
       loop: false
@@ -81,26 +61,57 @@ import { goToAnim } from './router/index';
       });
   }
 
-  //===============================ANIMATION PAGE==========================
+  //===============================ANIMATION PAGE============================
 
   export function movingText() {
-    console.log('triggered');
     anime.timeline({loop: false})
     .add({
       targets: '.text',
       opacity: [0,1],
-      easing: "easeInOutQuad",
+      easing: "easeInOutSine",
       duration: 2250,
-      delay: (el, i) => 150 * (i+1)
+      autoplay: true
     }).add({
       targets: '.text img',
       opacity: 0,
       translateX: -6000,
       easing: 'easeInOutSine',
       duration: 3000,
-      delay: 1000
+      delay: 1000,
+      autoplay: true
     });
   }
+
+  export function animation() {
+
+    let animation = anime.timeline({
+      loop: true,
+      direction: 'alternate'})
+    .add({
+      targets: '.line',
+      delay: 3000,
+      translateX: '-150%',
+      easing: "easeInOutSine",
+      duration: 2600,
+      autoplay: true
+    }).add({
+      targets: '.line',
+      scaleY: 50,
+      duration: 1500
+    }).add({
+      targets: '.gridAnim div',
+      easing: 'easeInOutSine',
+      delay: anime.stagger(50),
+      loop: true,
+      autoplay: false
+    });
+
+    document.querySelector('.click').addEventListener('click', () => {
+      animation.reverse();
+    });
+  }
+
+  //==============================INFORMATION PAGE============================
 
   export function transitionRight() {
     var introAnimation = anime.timeline({
@@ -112,4 +123,24 @@ import { goToAnim } from './router/index';
         duration: 6000,
         loop: false
       });
+  }
+
+  export function linedraw() {
+    var drawingAnimation = anime.timeline({
+      loop: false
+    });
+    drawingAnimation.add({
+        targets: ['#name-svg path', '.cls-1', '.cls-2'],
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 12000,
+        loop: false
+      })
+    .add({
+      targets: '#name-svg path',
+      fill: '#1E1E1E',
+      easing: 'easeOutSine',
+      duration: 500,
+      offset: 0
+    });
   }

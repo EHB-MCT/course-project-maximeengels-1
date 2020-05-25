@@ -23,12 +23,15 @@
   max-width: 100vw;
   max-height: 100vh;
   max-height: 100vh;
+  -moz-user-select: none;
+  user-select: none;
   /* overflow-x: hidden;
   overflow-y: hidden; */
 }
 
 #nav{
   position: fixed;
+  z-index: 1000;
 }
 
 body{
