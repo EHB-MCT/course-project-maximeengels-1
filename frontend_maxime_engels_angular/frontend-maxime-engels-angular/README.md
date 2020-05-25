@@ -31,6 +31,7 @@ Angular Documentation:
   Template Expressions
 
 Stack Overflow:
+
   Scroll-to-top on route change
     https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
   
